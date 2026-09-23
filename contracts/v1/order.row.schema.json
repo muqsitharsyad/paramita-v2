@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://paramita-final.test/contracts/v1/order.row.schema.json",
+  "title": "OrderRow",
+  "description": "Single DO record from orders.list (PRD §8.4). process_status_bucket and retry_attempt are browser-only derived fields; not required from vendor.",
+  "type": "object",
+  "required": [
+    "id", "order_number", "period_code", "ordered_at",
+    "student_name",
+    "province", "city", "district", "village",
+    "ut_code", "program_code",
+    "process_status_code",
+    "updated_at"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "id":                   { "type": "string", "maxLength": 100 },
+    "order_number":         { "type": "string", "maxLength": 255 },
+    "period_code":          { "type": "string", "maxLength": 10, "pattern": "^[0-9]{4,5}$", "description": "Masa pemesanan UT, contoh 20252. Halaman user memfilter DO per masa ini." },
+    "ordered_at":           { "type": "string", "format": "date-time" },
+    "student_name":         { "type": "string", "maxLength": 255 },
+    "province":             { "type": ["string", "null"], "maxLength": 255 },
+    "city":                 { "type": ["string", "null"], "maxLength": 255 },
+    "district":             { "type": ["string", "null"], "maxLength": 255 },
+    "village":              { "type": ["string", "null"], "maxLength": 255 },
+    "ut_code":              { "type": "string", "maxLength": 100 },
+    "program_code":         { "type": "string", "maxLength": 100 },
+    "process_status_code":  { "type": "string", "enum": ["01","02","03","04","05","06","07"] },
+    "updated_at":           { "type": "string", "format": "date-time" }
+  }
+}

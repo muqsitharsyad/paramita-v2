@@ -1,0 +1,95 @@
+.icon {
+  width: 24px;
+  height: 24px;
+  background-color: #637381;
+  transition: background-color 0.2s, filter 0.2s;
+  display: inline-block;
+}
+
+.icon-monitoring {
+  mask: url("/images/icon-monitoring-retry.svg") no-repeat center / contain;
+  -webkit-mask: url("/images/icon-monitoring-retry.svg") no-repeat center / contain;
+}
+
+.icon-monitoring-paket {
+  mask: url("/images/icon-monitoring-paket.svg") no-repeat center / contain;
+  -webkit-mask: url("/images/icon-monitoring-paket.svg") no-repeat center / contain;
+}
+
+.icon-monitoring-delivery {
+  mask: url("/images/icon-monitoring-delivery.svg") no-repeat center / contain;
+  -webkit-mask: url("/images/icon-monitoring-delivery.svg") no-repeat center / contain;
+}
+
+.icon-do-prodi {
+  mask: url("/images/icon-do-prodi.svg") no-repeat center / contain;
+  -webkit-mask: url("/images/icon-do-prodi.svg") no-repeat center / contain;
+}
+
+.icon-analisis-sla {
+  mask: url("/images/icon-analisis-sla.svg") no-repeat center / contain;
+  -webkit-mask: url("/images/icon-analisis-sla.svg") no-repeat center / contain;
+}
+
+.icon-do-ut-daerah {
+  mask: url("/images/icon-do-ut-daerah.svg") no-repeat center / contain;
+  -webkit-mask: url("/images/icon-do-ut-daerah.svg") no-repeat center / contain;
+}
+
+.icon-distribution-map {
+  mask: url("/images/icon-distribution-map.svg") no-repeat center / contain;
+  -webkit-mask: url("/images/icon-distribution-map.svg") no-repeat center / contain;
+}
+
+.list-group-item:hover .icon {
+  background-color: #00a76f; /* warna aktif saat hover */
+  filter: brightness(1.2) contrast(1.6);
+  transform: scale(1.15); /* sedikit membesar */
+}
+
+.list-group-item.active .icon {
+  background-color: #00a76f; /* warna aktif */
+  filter: brightness(0.8) contrast(1.8);
+}
+
+.icon-do {
+  width: 34px;
+  height: 34px;
+  transition: background-color 0.2s, filter 0.2s;
+  display: inline-block;
+}
+
+.icon-total-do {
+  background-color: #00b8d9;
+  mask: url("/images/icon-total-do.svg") no-repeat center / contain;
+  -webkit-mask: url("/images/icon-total-do.svg") no-repeat center / contain;
+  z-index: 5;
+}
+
+.icon-total-delivered {
+  background-color: #22c55e;
+  mask: url("/images/icon-total-deliv.svg") no-repeat center / contain;
+  -webkit-mask: url("/images/icon-total-deliv.svg") no-repeat center / contain;
+  z-index: 5;
+}
+
+.icon-on-process {
+  background-color: #ffab00;
+  mask: url("/images/icon-on-process.svg") no-repeat center / contain;
+  -webkit-mask: url("/images/icon-on-process.svg") no-repeat center / contain;
+  z-index: 5;
+}
+
+.icon-total-retry {
+  background-color: #ff5630;
+  mask: url("/images/icon-total-retry.svg") no-repeat center / contain;
+  -webkit-mask: url("/images/icon-total-retry.svg") no-repeat center / contain;
+  z-index: 5;
+}
+
+.icon-total-return {
+  background-color: #637381;
+  mask: url("/images/icon-total-return.svg") no-repeat center / contain;
+  -webkit-mask: url("/images/icon-total-return.svg") no-repeat center / contain;
+  z-index: 5;
+}

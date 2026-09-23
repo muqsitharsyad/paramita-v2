@@ -1,0 +1,58 @@
+@keyframes bounce {
+  0% {
+    transform-origin: 2500% 50%;
+    transform: rotate(180deg);
+    visibility: visible;
+  }
+
+  25% {
+    transform-origin: 500% 50%;
+    transform: rotate(135deg);
+  }
+
+  50% {
+    transform-origin: 300% 50%;
+    transform: rotate(90deg);
+  }
+
+  75% {
+    transform-origin: 100% 50%;
+    transform: rotate(45deg);
+  }
+
+  100% {
+    visibility: visible;
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+  }
+}
+
+/* Animations */
+@keyframes showText {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes bounces {
+  0% {
+    transform: translateY(-100%) scaleY(0.8);
+  }
+  40% {
+    transform: translateY(0) scaleY(1.08);
+  }
+  55% {
+    transform: translateY(-50%) scaleY(0.96);
+  }
+  70% {
+    transform: translateY(0) scaleY(1.02);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+}

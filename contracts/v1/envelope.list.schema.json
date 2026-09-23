@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://paramita-final.test/contracts/v1/envelope.list.schema.json",
+  "title": "Vendor List Envelope",
+  "description": "Standard list envelope for all vendor list responses (PRD §7.1)",
+  "type": "object",
+  "required": ["data", "meta"],
+  "additionalProperties": false,
+  "properties": {
+    "data": {
+      "type": "array"
+    },
+    "meta": {
+      "$ref": "#/$defs/ListMeta"
+    }
+  },
+  "$defs": {
+    "ListMeta": {
+      "type": "object",
+      "required": ["generated_at", "scope", "limit", "offset", "total_filtered", "has_more", "next_cursor"],
+      "additionalProperties": true,
+      "properties": {
+        "generated_at": { "type": "string", "format": "date-time" },
+        "scope": { "$ref": "#/$defs/VendorScope" },
+        "limit": { "type": "integer", "minimum": 0 },
+        "offset": { "type": "integer", "minimum": 0 },
+        "total_filtered": { "type": "integer", "minimum": 0 },
+        "has_more": { "type": "boolean" },
+        "next_cursor": { "type": ["string", "null"] }
+      }
+    },
+    "VendorScope": {
+      "type": "object",
+      "required": ["ut_code", "program_codes"],
+      "additionalProperties": true,
+      "properties": {
+        "ut_code": { "type": ["string", "null"] },
+        "program_codes": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

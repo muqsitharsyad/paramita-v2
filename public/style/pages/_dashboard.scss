@@ -1,0 +1,250 @@
+.page-dashboard {
+  #page-content-wrapper {
+    background: #fff;
+    min-width: 100vw;
+  }
+
+  #sidebar-wrapper {
+    margin-top: 60px;
+    min-height: 100vh;
+    margin-left: -15rem;
+    transition: margin 0.25s ease-out;
+
+    .sidebar-heading-logo {
+      padding: 10px 12px;
+      margin-top: 24px;
+      margin-left: 16px;
+      a {
+        img {
+          width: 16px;
+          height: 20px;
+        }
+      }
+    }
+
+    .sidebar-heading-akun {
+      margin-top: 26px;
+      .akun-wrapper {
+        img {
+          width: 40px;
+          height: 40px;
+        }
+        .akun-text {
+          margin-left: 16px;
+
+          .akun-nama {
+            font-size: 14px !important;
+            line-height: 22px;
+          }
+
+          .akun-subtitle {
+            font-size: 14px !important;
+          }
+        }
+      }
+    }
+
+    .list-group {
+      width: 15rem;
+
+      .list-menu {
+        font-size: 11px !important;
+      }
+    }
+  }
+
+  #wrapper {
+    &.toggled {
+      #sidebar-wrapper {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .navbar-store {
+    margin-top: 0;
+    background-color: #f5f5fb;
+    box-shadow: 0px 4px 5px #cacad1;
+    @include media-breakpoint-up(md) {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  .navbar-judul {
+    margin-left: 40px;
+
+    .navbar-title {
+      line-height: 28;
+      font-size: 18px !important;
+      line-height: 28px !important;
+      margin-bottom: 0;
+    }
+
+    .navbar-subtitle {
+      font-weight: 400;
+      font-size: 8px !important;
+      line-height: 18px !important;
+      margin-bottom: 0;
+    }
+  }
+
+  .list-group-item {
+    border: 0;
+    font-size: 16px;
+    color: #c5c5c5;
+
+    &:hover {
+      background-color: rgba(0, 167, 111, 0.08);
+      border-right: 4px solid #00a76f;
+      color: #00a76f;
+      cursor: pointer;
+    }
+
+    &.active {
+      background-color: rgba(0, 167, 111, 0.08);
+      border-right: 4px solid #00a76f;
+      color: #00a76f;
+      font-weight: 600;
+    }
+  }
+
+  .section-all-paket {
+    .card-body {
+      padding-left: 20px !important;
+    }
+    .filter-status {
+      span.border-status {
+        margin-top: 12px;
+        padding: 8px 9px;
+        border-style: dashed !important;
+        font-size: 14px !important;
+        line-height: 22px !important;
+      }
+
+      span.badge-status {
+        font-size: 13px !important;
+        line-height: 18px !important;
+      }
+    }
+
+    .form-input-search {
+      margin-top: 36px;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    #sidebar-wrapper {
+      margin-left: 0;
+      margin-top: 0px;
+    }
+
+    #page-content-wrapper {
+      min-width: 0;
+      width: 100%;
+    }
+
+    #wrapper {
+      &.toggled {
+        #sidebar-wrapper {
+          margin-left: -15rem;
+        }
+      }
+    }
+  }
+
+  .section-content {
+    margin-top: 100px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 10px;
+      margin-left: 40px;
+    }
+
+    .breadcrumbs-title {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 0;
+      color: #212b36;
+    }
+
+    .breadcrumb-nav {
+      background: transparent;
+      padding: 6px 0;
+    }
+
+    .breadcrumb {
+      margin: 0;
+      padding: 0;
+      background: none;
+      font-size: 14px;
+      line-height: 22px;
+      color: #212b36;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+      color: #919eab;
+      font-weight: 600;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .breadcrumb-item a {
+      color: #6c757d;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .breadcrumb-item a:hover {
+      color: #919eab;
+    }
+
+    .breadcrumb-item.active {
+      color: #919eab;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .dashboard-content {
+      margin-top: 24px;
+
+      .dashboard-title {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+    .gallery-container {
+      .delete-gallery {
+        display: block;
+        position: absolute;
+        top: -10px;
+        right: 0;
+      }
+    }
+  }
+}
+
+.section-card-chat-penyedia {
+  margin-bottom: 24px;
+}
+
+.section-all-paket {
+  .filter-status {
+    span.border-status {
+      margin-top: 12px;
+      padding: 8px 9px;
+      border-style: dashed !important;
+      font-size: 14px !important;
+      line-height: 22px !important;
+    }
+
+    span.badge-status {
+      font-size: 13px !important;
+      line-height: 18px !important;
+    }
+  }
+
+  .form-input-search {
+    margin-top: 36px;
+  }
+}

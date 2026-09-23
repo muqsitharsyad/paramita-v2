@@ -1,0 +1,268 @@
+.section-landing {
+  height: 100vh;
+  background-color: #f8fbff;
+  margin: 0; /* hindari margin default body */
+  overflow-x: hidden; /* 🚫 cegah scroll ke kanan */
+  background-size: cover;
+  background-image: url("/images/background-landing.png");
+  padding-right: 0px;
+}
+.landing-page {
+  padding: 0 144px;
+}
+.nav-logo {
+  padding: 24px 0;
+  margin-bottom: 100px;
+}
+
+.logo-ut {
+  width: 54px;
+  height: 42px;
+}
+
+.logo-paramita {
+  width: 34px;
+  height: 42px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.kotak-right {
+  .kotak-paramita {
+    display: flex;
+    width: 604px;
+  }
+
+  .detail-subtittle-paramita {
+    font-size: 20px !important;
+    width: 604px;
+    line-height: 30px !important;
+  }
+}
+
+.ball {
+  font-weight: 800;
+  border-radius: 50px;
+  font-size: 70px;
+  transform: rotate(30deg);
+  visibility: hidden;
+  animation: bounce 1s linear forwards;
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.ball:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.ball:nth-child(2) {
+  animation-delay: 1s;
+}
+.ball:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.ball:nth-child(4) {
+  animation-delay: 2s;
+}
+.ball:nth-child(5) {
+  animation-delay: 2.5s;
+}
+.ball:nth-child(6) {
+  animation-delay: 3.5s;
+}
+.ball:nth-child(7) {
+  animation-delay: 4s;
+}
+.ball:nth-child(8) {
+  animation-delay: 4.5s;
+}
+
+footer {
+  margin-top: 0px;
+}
+
+.gap-footer {
+  gap: 60px;
+}
+
+.section-footer {
+  background-color: #f8fbff;
+  padding: 15px 144px 0;
+}
+
+.text-judul-footer {
+  font-size: 12px !important;
+  line-height: 18px !important;
+  margin-bottom: 24px;
+  color: #212b36 !important;
+}
+
+.text-subjudul-footer {
+  font-size: 14px !important;
+  line-height: 2px !important;
+}
+
+.copyright {
+  font-size: 14px !important;
+  line-height: 2px !important;
+  padding-top: 40px;
+}
+
+.btn-login {
+  width: 70px;
+  border-radius: 8px;
+  margin-top: 20px;
+  background-color: #212b36;
+  color: #fff;
+  box-shadow: 0 9px #999;
+
+  &:hover {
+    background-color: #fff;
+    color: #212b36;
+    border-color: #212b36;
+  }
+
+  &:active {
+    background-color: #fff;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+}
+
+.modal-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 31.25rem;
+  width: 100%;
+  padding: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(42, 126, 188, 0.51);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  outline: 3px solid #ffffff;
+  outline-offset: -15px;
+  animation: bounces 0.8s linear;
+
+  .kotak-logo-paramita {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: #5a9fd3;
+    top: -60px;
+    box-shadow: 0 9px rgba(53, 55, 56, 0.51);
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .logo-paramita {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .login-text {
+    font-size: clamp(1.3rem, 5.5vw, 2rem);
+    color: #000;
+    animation: showText 1.5s linear;
+  }
+
+  .input-group {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .input-group:last-of-type {
+    margin-bottom: 10px;
+  }
+
+  form {
+    width: 80%;
+    animation: showText 1.5s linear;
+  }
+
+  .input-group input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-size: 1rem;
+    transition: 0.5s;
+  }
+
+  .input-group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    transition: 0.5s;
+  }
+
+  .input-group input:focus,
+  .input-group input:valid,
+  .input-group input:not(:placeholder-shown) {
+    border-bottom-color: #000;
+  }
+
+  .input-group input:focus ~ label,
+  .input-group input:valid ~ label,
+  .input-group input:not(:placeholder-shown) ~ label {
+    font-size: 0.75rem;
+    top: -16px;
+    color: #000;
+  }
+
+  .forget-pass {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: #040463;
+    margin-bottom: 10px;
+    text-decoration: none;
+    opacity: 0.7;
+  }
+
+  .forget-pass:hover {
+    text-decoration: underline;
+    opacity: 1;
+  }
+
+  .btn {
+    display: block;
+    color: #040463;
+    border-radius: 8px;
+    border: 0;
+    background: #5a9fd3;
+    padding: 8px 32px;
+    margin-inline: auto;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: 2px solid #5a9fd3;
+    outline-offset: -4px;
+    transition: 0.5s;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  .btn:hover {
+    background: #040463;
+    color: #fff;
+  }
+}

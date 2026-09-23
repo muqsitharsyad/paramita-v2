@@ -1,0 +1,340 @@
+
+/* Admin review workspace: decision tables expose lifecycle states rather than decorative dashboard cards. */
+.admin-review-page {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.admin-review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem 0;
+    border-bottom: 2px solid var(--paramita-ink);
+}
+
+.admin-review-header h2 {
+    margin: 0;
+    color: var(--paramita-ink);
+    font-size: clamp(1.45rem, 2.5vw, 2rem);
+    font-weight: 800;
+}
+
+.admin-review-header p {
+    max-width: 800px;
+    margin: .45rem 0 0;
+    color: var(--paramita-muted);
+}
+
+.admin-review-summary {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border: 1px solid var(--paramita-border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.admin-review-summary > div {
+    padding: .9rem 1rem;
+    border-right: 1px solid var(--paramita-border);
+}
+
+.admin-review-summary > div:last-child {
+    border-right: 0;
+}
+
+.admin-review-summary span,
+.admin-review-summary strong {
+    display: block;
+}
+
+.admin-review-summary span {
+    color: var(--paramita-muted);
+    font-size: .78rem;
+    font-weight: 700;
+}
+
+.admin-review-summary strong {
+    margin-top: .15rem;
+    color: var(--paramita-ink);
+    font-size: 1.5rem;
+    font-weight: 850;
+}
+
+.admin-review-section {
+    overflow: hidden;
+    border: 1px solid var(--paramita-border);
+    border-radius: 12px;
+    background: #fff;
+}
+
+.admin-review-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.15rem;
+    border-bottom: 1px solid var(--paramita-border);
+    background: #fbfcfe;
+}
+
+.admin-review-section-heading h3 {
+    margin: 0;
+    color: var(--paramita-ink);
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.admin-review-section-heading p {
+    margin: .3rem 0 0;
+    color: var(--paramita-muted);
+    font-size: .82rem;
+}
+
+.admin-review-search {
+    display: flex;
+    gap: .5rem;
+    width: min(100%, 380px);
+}
+
+.admin-review-table {
+    min-width: 900px;
+}
+
+.admin-review-table thead th {
+    padding: .8rem 1rem;
+    color: #475467;
+    background: #f9fafb;
+    border-bottom-width: 1px;
+    font-size: .74rem;
+    font-weight: 800;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+}
+
+.admin-review-table tbody td {
+    padding: .9rem 1rem;
+    vertical-align: middle;
+    border-color: var(--paramita-border);
+}
+
+.admin-review-table strong,
+.admin-review-table code,
+.admin-review-table small {
+    display: block;
+}
+
+.admin-review-table strong {
+    color: var(--paramita-ink);
+    font-size: .86rem;
+}
+
+.admin-review-table code {
+    margin-top: .2rem;
+    color: var(--paramita-blue);
+    font-size: .73rem;
+}
+
+.admin-review-table small {
+    margin-top: .28rem;
+    color: var(--paramita-muted);
+    font-size: .74rem;
+}
+
+.admin-url {
+    max-width: 360px;
+    overflow-wrap: anywhere;
+    color: #344054 !important;
+}
+
+.admin-review-actions {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: .45rem;
+}
+
+.admin-test-detail {
+    padding: 1rem !important;
+    background: #fcfcfd;
+}
+
+.admin-test-detail h4 {
+    margin: 0 0 .65rem;
+    color: var(--paramita-ink);
+    font-size: .88rem;
+    font-weight: 800;
+}
+
+.admin-test-check {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: .75rem;
+    margin-top: .45rem;
+    padding: .65rem .75rem;
+    border-radius: 7px;
+    font-size: .8rem;
+}
+
+.admin-test-check span { white-space: pre-line; overflow-wrap: anywhere; }
+
+.admin-test-check.is-pass {
+    background: #ecfdf3;
+    color: #05603a;
+}
+
+.admin-test-check.is-fail {
+    background: #fef3f2;
+    color: #912018;
+}
+
+.admin-empty-state {
+    padding: 1rem;
+    color: var(--paramita-muted);
+    font-size: .85rem;
+    text-align: center;
+}
+
+.admin-review-section { margin-bottom: 1.25rem; }
+.admin-review-page > .admin-review-section { margin-top: 1.25rem; }
+.admin-vendor-groups { display: grid; gap: 1rem; padding: 1rem; background: #f7f9fb; }
+.admin-vendor-group { overflow: hidden; border: 1px solid var(--paramita-border); border-radius: 8px; background: #fff; }
+.admin-vendor-group > header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 1rem; border-bottom: 1px solid var(--paramita-border); background: #f9fafb; }
+.admin-vendor-group > header strong,
+.admin-vendor-group > header code { display: block; }
+.admin-vendor-group > header strong { color: var(--paramita-ink); font-size: .92rem; }
+.admin-vendor-group > header code { margin-top: .15rem; color: var(--paramita-blue); font-size: .72rem; }
+.admin-vendor-group > header span { color: var(--paramita-muted); font-size: .76rem; white-space: nowrap; }
+
+/* Collapsible vendor group: the header itself is the toggle; the detail table is hidden
+   until the admin clicks the vendor name, so the page starts compact (vendor name first). */
+.admin-vendor-group.is-collapsible > header {
+    cursor: pointer;
+    user-select: none;
+    transition: background .15s ease;
+}
+.admin-vendor-group.is-collapsible > header:hover { background: #f1f5f9; }
+.admin-vendor-group.is-collapsible > header:focus-visible {
+    outline: 2px solid var(--paramita-blue);
+    outline-offset: -2px;
+}
+.admin-vendor-group-head {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    min-width: 0;
+}
+.admin-vendor-group-head > div { min-width: 0; }
+.admin-vendor-group-head strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.admin-vendor-group-toggle {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--paramita-border);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--paramita-muted);
+    transition: transform .18s ease, color .18s ease, background .18s ease;
+}
+.admin-vendor-group-toggle svg { width: 16px; height: 16px; }
+.admin-vendor-group.is-open .admin-vendor-group-toggle { transform: rotate(180deg); color: var(--paramita-blue); }
+.admin-vendor-group-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+}
+.admin-vendor-group-meta .status-label { font-size: .7rem; }
+
+.admin-pager {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: .75rem;
+    padding: .75rem 1.15rem;
+    border-top: 1px solid var(--paramita-border);
+    background: #fbfcfe;
+    color: var(--paramita-muted);
+    font-size: .8rem;
+}
+
+.admin-pager nav ul { margin: 0; gap: .25rem; }
+.admin-pager .page-link { min-width: 38px; min-height: 38px; display: inline-flex; align-items: center; justify-content: center; font-size: .8rem; }
+
+@media (max-width: 768px) {
+    .admin-pager { justify-content: center; text-align: center; }
+    .admin-review-search { width: 100%; }
+}
+
+@media (max-width: 768px) {
+    .admin-page {
+        padding: 1rem;
+    }
+
+    .admin-review-header,
+    .admin-review-section-heading {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .admin-review-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .admin-review-summary > div:nth-child(2) {
+        border-right: 0;
+    }
+
+    .admin-review-summary > div:nth-child(-n+2) {
+        border-bottom: 1px solid var(--paramita-border);
+    }
+
+    .admin-review-search {
+        width: 100%;
+    }
+
+    .admin-test-check {
+        grid-template-columns: 1fr;
+        gap: .25rem;
+    }
+}
+
+/* --- JSON template drift (admin) --- */
+.template-drift-panel { border-left: 3px solid #d92d20; }
+.template-drift-item { margin-top: .5rem; }
+.template-drift-item code { font-size: .78rem; color: #b42318; }
+
+/* --- Admin: field map (vendor -> Paramita) --- */
+.field-map-form { display: grid; gap: .4rem; }
+.field-map-head,
+.field-map-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 42px;
+    gap: .5rem;
+    align-items: center;
+}
+.field-map-head span {
+    font-size: .72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    color: #667085;
+}
+.field-map-rows { display: grid; gap: .4rem; }
+.field-map-row .btn { min-height: 32px; line-height: 1; }
+.field-map-empty { margin: .35rem 0 0; }
+
+@media (max-width: 700px) {
+    .field-map-head { display: none; }
+    .field-map-row { grid-template-columns: 1fr; }
+    .field-map-row .btn { justify-self: end; }
+}

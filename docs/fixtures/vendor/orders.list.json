@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "id": "ORDER-DEMO-01",
+      "order_number": "DO-DEMO-01",
+      "period_code": "20252",
+      "ordered_at": "2026-09-09T08:00:00Z",
+      "student_name": "Mahasiswa DEMO",
+      "province": "Jawa Barat",
+      "city": "Bandung",
+      "district": "Coblong",
+      "village": "Dago",
+      "ut_code": "UN31.UT1",
+      "program_code": "PRODI-DEMO-01",
+      "process_status_code": "07",
+      "updated_at": "2026-09-11T08:00:00Z"
+    }
+  ],
+  "meta": {
+    "generated_at": "2026-09-11T10:00:00Z",
+    "data_as_of": "2026-09-11T10:00:00Z",
+    "scope": {
+      "ut_code": "UN31.UT1",
+      "program_codes": []
+    },
+    "limit": 25,
+    "offset": 0,
+    "total_filtered": 1,
+    "has_more": false
+  }
+}

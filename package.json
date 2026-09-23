@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@fontsource/public-sans": "^5.2.0",
+    "@highcharts/map-collection": "^2.3.3",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8",
+    "chart.js": "^4.5.0",
+    "highcharts": "^13.0.2"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3",
+    "laravel-vite-plugin": "^3.1",
+    "vite": "^8.0.0"
+  }
+}

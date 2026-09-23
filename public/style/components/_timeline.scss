@@ -1,0 +1,111 @@
+/* WRAPPER TIMELINE */
+.timeline {
+  max-width: 575px;
+  min-width: 300px;
+  position: relative;
+  padding-left: 32px; /* ruang buat dot & garis di kiri */
+}
+
+/* SATU ITEM */
+.timeline .item {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+/* Sedikit jarak di atas tiap item */
+.timeline .gap {
+  height: 4px;
+}
+
+/* DOT + TEKS */
+.timeline .dot {
+  position: relative;
+  padding-left: 16px; /* jarak teks dari garis/dot */
+}
+
+/* Lingkaran di kiri */
+.timeline .dot::before {
+  content: "";
+  position: absolute;
+  left: -10px; /* posisinya tepat di kiri teks */
+  top: 2px; /* sejajarkan dengan judul */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(145, 158, 171, 0.24);
+  background: rgba(145, 158, 171, 0.24);
+}
+
+/* Dot lebih besar kalau pakai .big */
+.timeline .dot.big::before {
+  width: 14px;
+  height: 14px;
+}
+
+/* Kalau mau dot aktif (pakai class .active di .dot) */
+.timeline .dot.active::before {
+  border-color: #00a76f;
+  background: #00a76f;
+}
+
+/* JUDUL */
+.timeline .label-judul {
+  font-size: 14px !important;
+  line-height: 22px !important;
+  margin-bottom: 1px;
+  color: #212529;
+}
+
+/* SUB WRAPPER DENGAN GARIS */
+.timeline .border-sub {
+  margin-top: 4px;
+  margin-left: -20px !important; /* supaya garis sejajar dengan dot */
+  padding-left: 20px; /* jarak teks dari garis */
+  border-left: 1px solid #dee2e6;
+}
+
+/* SUB TEXT */
+.timeline .sub {
+  font-size: 12px !important;
+  color: #919eab;
+  line-height: 18px !important;
+}
+
+/* HAPUS GARIS DI ITEM TERAKHIR */
+.timeline .item:last-child .border-sub {
+  border-left: none;
+}
+
+/* RESPONSIVE KECIL */
+@media (max-width: 576px) {
+  .timeline {
+    padding-left: 28px;
+  }
+  .timeline .dot::before {
+    left: -9px;
+    width: 10px;
+    height: 10px;
+  }
+  .timeline .label-judul {
+    font-size: 0.9rem;
+  }
+  .timeline .sub {
+    font-size: 0.8rem;
+  }
+}
+
+/* kalau ingin border-sub item tertentu hilang (misal item ke-6) */
+.timeline .item.no-border .border-sub {
+  border-left: none;
+}
+
+/* tombol show more/less */
+.show-toggle-btn {
+  font-size: 12px;
+  color: #0d6efd;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  margin-top: 4px;
+}

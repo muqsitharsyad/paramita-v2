@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "id": "BOOK-0001",
+      "catalog_key": "BOOK-DEMO-01",
+      "item_type": "book",
+      "item_code": "BK-DEMO-01",
+      "edition": "1",
+      "title": "Buku DEMO",
+      "size_label": "A4",
+      "ut_code": "UN31.UT1",
+      "program_code": "PRODI-DEMO-01",
+      "stock_quantity": 120,
+      "required_quantity": 150,
+      "unit_weight_kg": 0.5,
+      "total_weight_kg": 60,
+      "total_height_cm": null,
+      "total_area_m2": null,
+      "updated_at": "2026-09-11T10:00:00Z"
+    }
+  ],
+  "meta": {
+    "generated_at": "2026-09-11T10:00:00Z",
+    "data_as_of": "2026-09-11T10:00:00Z",
+    "scope": {
+      "ut_code": "UN31.UT1",
+      "program_codes": []
+    },
+    "limit": 25,
+    "offset": 0,
+    "total_filtered": 1,
+    "has_more": false
+  }
+}

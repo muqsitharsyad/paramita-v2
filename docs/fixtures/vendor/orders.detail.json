@@ -1,0 +1,49 @@
+{
+  "data": {
+    "id": "ORDER-DEMO-01",
+    "order_number": "DO-DEMO-01",
+    "period_code": "20252",
+    "ordered_at": "2026-09-09T08:00:00Z",
+    "student_identifier": "012345678",
+    "student_name": "Mahasiswa DEMO",
+    "student_phone": "081234567890",
+    "address_line": "Jl. Pendidikan No. 1",
+    "province": null,
+    "city": null,
+    "district": null,
+    "village": null,
+    "ut_code": "UN31.UT1",
+    "program_code": "PRODI-DEMO-01",
+    "process_status_code": "07",
+    "updated_at": "2026-09-11T08:00:00Z",
+    "package_code": "PKT-DEMO-01",
+    "package_title": "Paket DEMO",
+    "carrier_name": "Kurir DEMO",
+    "tracking_number": "RESI-DEMO-01",
+    "paid_at": "2026-09-09T08:30:00Z",
+    "handed_to_carrier_at": "2026-09-10T08:00:00Z",
+    "completed_at": "2026-09-11T08:00:00Z",
+    "sla_target_days": 2,
+    "sla_elapsed_days": 1,
+    "sla_status": "on_sla",
+    "latitude": null,
+    "longitude": null,
+    "latest_event": {
+      "id": "EVENT-3",
+      "occurred_at": "2026-09-11T08:00:00Z",
+      "title": "Diterima",
+      "description": null,
+      "location": null,
+      "process_status_code": "07"
+    },
+    "proof_of_delivery_url": null
+  },
+  "meta": {
+    "generated_at": "2026-09-11T10:00:00Z",
+    "data_as_of": "2026-09-11T10:00:00Z",
+    "scope": {
+      "ut_code": "UN31.UT1",
+      "program_codes": []
+    }
+  }
+}

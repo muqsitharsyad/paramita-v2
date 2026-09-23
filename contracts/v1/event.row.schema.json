@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://paramita-final.test/contracts/v1/event.row.schema.json",
+  "title": "EventRow",
+  "description": "Single event from orders.events (PRD §8.6)",
+  "type": "object",
+  "required": ["id", "occurred_at", "title", "description", "location", "process_status_code"],
+  "additionalProperties": true,
+  "properties": {
+    "id":                  { "type": "string", "maxLength": 100 },
+    "occurred_at":         { "type": "string", "format": "date-time" },
+    "title":               { "type": "string", "maxLength": 255 },
+    "description":         { "type": ["string", "null"], "maxLength": 1000 },
+    "location":            { "type": ["string", "null"], "maxLength": 255 },
+    "process_status_code": { "type": ["string", "null"], "enum": ["01","02","03","04","05","06","07", null] }
+  }
+}

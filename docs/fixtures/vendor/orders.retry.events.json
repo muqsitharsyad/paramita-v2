@@ -1,0 +1,15 @@
+{
+  "data": [],
+  "meta": {
+    "generated_at": "2026-09-11T10:00:00Z",
+    "data_as_of": "2026-09-11T10:00:00Z",
+    "scope": {
+      "ut_code": "UN31.UT1",
+      "program_codes": []
+    },
+    "limit": 25,
+    "offset": 0,
+    "total_filtered": 0,
+    "has_more": false
+  }
+}

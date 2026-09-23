@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "catalog_key": "PACKAGE-DEMO-01",
+      "stock_quantity": 120,
+      "availability": "available",
+      "updated_at": "2026-09-11T10:00:00Z"
+    }
+  ],
+  "meta": {
+    "generated_at": "2026-09-11T10:00:00Z",
+    "data_as_of": "2026-09-11T10:00:00Z",
+    "scope": {
+      "ut_code": "UN31.UT1",
+      "program_codes": []
+    },
+    "limit": 1,
+    "offset": 0,
+    "total_filtered": 1,
+    "has_more": false
+  }
+}

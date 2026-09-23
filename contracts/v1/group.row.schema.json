@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://paramita-final.test/contracts/v1/group.row.schema.json",
+  "title": "GroupRow",
+  "description": "Single grouped summary row from orders.summary group_by=program or group_by=ut (PRD §8.7)",
+  "type": "object",
+  "required": ["group_code", "summary"],
+  "additionalProperties": true,
+  "properties": {
+    "group_code": { "type": "string", "maxLength": 100 },
+    "summary": {
+      "$ref": "https://paramita-final.test/contracts/v1/summary.row.schema.json"
+    }
+  }
+}

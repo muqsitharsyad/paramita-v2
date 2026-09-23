@@ -1,0 +1,16 @@
+{
+  "_comment": "Valid: unicode fields — title and student_name with Unicode characters",
+  "id": "ORDER-UNICODE-01",
+  "order_number": "DO-UNICODE-01",
+  "ordered_at": "2026-09-09T08:00:00Z",
+  "student_name": "Mahasiswa Tëst Üniçödé",
+  "province": "Jawa Tengah",
+  "city": "Kota Semarang",
+  "district": "Banyumanik",
+  "village": "Srondol Wetan",
+  "ut_code": "UT-DEMO-05",
+  "program_code": "PRODI-DEMO-05",
+  "process_status_code": "02",
+  "updated_at": "2026-09-10T08:00:00Z",
+  "period_code": "20252"
+}

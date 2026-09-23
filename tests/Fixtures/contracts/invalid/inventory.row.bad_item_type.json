@@ -1,0 +1,19 @@
+{
+  "_comment": "INVALID: item_type unknown value — not package or book",
+  "id": "STOCK-BAD-03",
+  "catalog_key": "PACKAGE-DEMO-01",
+  "item_type": "kit",
+  "item_code": "PKT-DEMO-01",
+  "edition": "",
+  "title": "Paket DEMO",
+  "size_label": null,
+  "ut_code": "UT-DEMO-01",
+  "program_code": "PRODI-DEMO-01",
+  "stock_quantity": 120,
+  "required_quantity": 150,
+  "unit_weight_kg": 0.5,
+  "total_weight_kg": 60,
+  "total_height_cm": null,
+  "total_area_m2": null,
+  "updated_at": "2026-09-11T10:00:00Z"
+}

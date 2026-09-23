@@ -1,0 +1,831 @@
+
+/* Vendor integration workspace: dense enough for operators, but written around the actual configure-test-approve flow. */
+.vendor-workspace {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.vendor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.25rem 0;
+    border-bottom: 2px solid var(--paramita-ink);
+}
+
+.vendor-header h2,
+.vendor-section h3 {
+    margin: 0;
+    color: var(--paramita-ink);
+    font-weight: 800;
+}
+
+.vendor-header h2 {
+    font-size: clamp(1.45rem, 2.5vw, 2rem);
+}
+
+.vendor-header p {
+    max-width: 760px;
+    margin: .45rem 0 0;
+    color: var(--paramita-muted);
+}
+
+.vendor-kicker {
+    margin: 0 0 .25rem;
+    color: var(--paramita-blue);
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.vendor-header-status,
+.vendor-actions,
+.vendor-connection-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem;
+}
+
+.vendor-account-state {
+    display: grid;
+    justify-items: end;
+    gap: .3rem;
+}
+
+.vendor-account-state-label {
+    color: var(--paramita-muted);
+    font-size: .72rem;
+    font-weight: 700;
+}
+
+.vendor-flow {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border: 1px solid var(--paramita-border);
+    background: var(--paramita-soft);
+}
+
+.vendor-flow > div {
+    padding: .85rem 1rem;
+    border-right: 1px solid var(--paramita-border);
+}
+
+.vendor-flow > div:last-child {
+    border-right: 0;
+}
+
+.vendor-flow strong,
+.vendor-flow span {
+    display: block;
+}
+
+.vendor-flow strong {
+    color: var(--paramita-ink);
+    font-size: .88rem;
+}
+
+.vendor-flow span {
+    margin-top: .2rem;
+    color: var(--paramita-muted);
+    font-size: .78rem;
+}
+
+.vendor-section {
+    overflow: hidden;
+    border: 1px solid var(--paramita-border);
+    border-radius: 12px;
+    background: var(--paramita-panel);
+}
+
+.vendor-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 1.15rem;
+    border-bottom: 1px solid var(--paramita-border);
+    background: #fbfcfe;
+}
+
+.vendor-section-heading h3 {
+    font-size: 1rem;
+}
+
+.vendor-section-heading p {
+    max-width: 960px;
+    margin: .35rem 0 0;
+    color: var(--paramita-muted);
+    font-size: .86rem;
+}
+
+.vendor-notice {
+    margin: 1rem 1.15rem 0;
+    padding: .8rem 1rem;
+    border: 1px solid #f4bf45;
+    border-radius: 8px;
+    background: #fffaeb;
+    color: #7a5210;
+    font-size: .88rem;
+}
+
+.vendor-connection-form {
+    display: grid;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    border-bottom: 1px solid var(--paramita-border);
+}
+
+.vendor-fieldset {
+    display: grid;
+    gap: .85rem;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    min-width: 0;
+}
+
+.vendor-legend {
+    padding: 0 0 .35rem;
+    color: var(--paramita-ink);
+    font-size: .82rem;
+    font-weight: 800;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+}
+
+.vendor-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .85rem;
+}
+
+.vendor-url-field { min-width: 0; }
+
+.vendor-auth-fieldset {
+    padding: 1.1rem;
+    border: 1px solid var(--paramita-border);
+    border-radius: 10px;
+    background: var(--paramita-soft);
+}
+
+.vendor-auth-fieldset[hidden] { display: none; }
+
+.vendor-connection-form label,
+.vendor-endpoint-form label {
+    display: block;
+    margin-bottom: .35rem;
+    color: #344054;
+    font-size: .8rem;
+    font-weight: 750;
+}
+
+.vendor-connection-form small,
+.vendor-endpoint-form small {
+    display: block;
+    margin-top: .3rem;
+    color: var(--paramita-muted);
+    font-size: .72rem;
+}
+
+.vendor-auth-fields {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: .85rem;
+    align-items: end;
+}
+
+.vendor-auth-fields [hidden] {
+    display: none !important;
+}
+
+.vendor-form-action {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: .85rem;
+    border-top: 1px solid var(--paramita-border);
+}
+
+.vendor-form-action .btn {
+    min-height: 42px;
+    white-space: nowrap;
+}
+
+.vendor-status-explainer {
+    margin: .75rem 0 0;
+    padding: .7rem .9rem;
+    border: 1px solid var(--paramita-border);
+    border-radius: 8px;
+    background: var(--paramita-soft);
+    color: var(--paramita-muted);
+    font-size: .82rem;
+}
+
+.vendor-connection-list {
+    display: grid;
+    gap: .65rem;
+    padding: 1rem 1.15rem 1.15rem;
+}
+
+.vendor-connection-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: .75rem .9rem;
+    border: 1px solid var(--paramita-border);
+    border-radius: 8px;
+    background: #fff;
+}
+
+.vendor-connection-row strong,
+.vendor-connection-row code,
+.vendor-connection-row span {
+    display: block;
+}
+
+.vendor-connection-row code {
+    margin-top: .18rem;
+    color: var(--paramita-muted);
+    font-size: .76rem;
+}
+
+.status-label {
+    display: inline-block;
+    padding: .2rem .45rem;
+    border-radius: 4px;
+    font-size: .72rem;
+    font-weight: 750;
+    line-height: 1.2;
+}
+
+.status-approved {
+    background: #ecfdf3;
+    color: #027a48;
+}
+
+.status-waiting {
+    background: #fffaeb;
+    color: #7a5210;
+}
+
+.status-error {
+    background: #fef3f2;
+    color: #b42318;
+}
+
+.vendor-endpoint-table {
+    min-width: 930px;
+}
+
+.vendor-endpoint-table thead th {
+    padding: .8rem 1rem;
+    color: #475467;
+    background: #f9fafb;
+    border-bottom-width: 1px;
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+}
+
+.vendor-endpoint-table tbody td {
+    padding: .9rem 1rem;
+    vertical-align: middle;
+    border-color: var(--paramita-border);
+}
+
+.vendor-endpoint-table strong,
+.vendor-endpoint-table code,
+.vendor-endpoint-table small {
+    display: block;
+}
+
+.vendor-endpoint-table strong {
+    color: var(--paramita-ink);
+    font-size: .88rem;
+}
+
+.vendor-endpoint-table td > code {
+    margin-top: .2rem;
+    color: var(--paramita-blue);
+    font-size: .74rem;
+}
+
+.vendor-endpoint-table small {
+    max-width: 320px;
+    margin-top: .3rem;
+    color: var(--paramita-muted);
+    font-size: .75rem;
+}
+
+.vendor-url {
+    max-width: 350px;
+    overflow-wrap: anywhere;
+    color: #344054;
+    font-size: .75rem;
+}
+
+.vendor-detail-cell,
+.vendor-guide-cell {
+    padding: 0 !important;
+    background: #fcfcfd;
+}
+
+.vendor-endpoint-form {
+    display: grid;
+    grid-template-columns: minmax(220px, .8fr) minmax(300px, 1.2fr);
+    gap: .85rem;
+    align-items: end;
+    padding: 1rem;
+    border-top: 1px solid var(--paramita-border);
+    border-bottom: 1px solid var(--paramita-border);
+}
+
+.vendor-endpoint-form > .btn {
+    justify-self: start;
+    min-height: 42px;
+}
+
+.vendor-draft-note {
+    margin: 0;
+    padding: 0 1rem 1rem;
+    color: var(--paramita-muted);
+    font-size: .78rem;
+}
+
+.vendor-contract-guide,
+.vendor-test-result {
+    border-top: 1px solid var(--paramita-border);
+}
+
+.vendor-contract-guide summary,
+.vendor-test-result summary {
+    padding: .85rem 1rem;
+    cursor: pointer;
+    color: var(--paramita-blue);
+    font-size: .84rem;
+    font-weight: 750;
+}
+
+.vendor-guide-grid {
+    display: grid;
+    grid-template-columns: minmax(280px, .7fr) minmax(460px, 1.3fr);
+    gap: 1.25rem;
+    padding: .25rem 1rem 1rem;
+}
+
+.vendor-guide-grid h4 {
+    margin: 0 0 .45rem;
+    color: var(--paramita-ink);
+    font-size: .9rem;
+    font-weight: 800;
+}
+
+.vendor-guide-grid p,
+.vendor-guide-grid li {
+    color: #475467;
+    font-size: .79rem;
+}
+
+.vendor-guide-grid ul {
+    margin: .35rem 0 .9rem;
+    padding-left: 1.2rem;
+}
+
+.vendor-guide-label {
+    margin: .65rem 0 .2rem;
+    color: var(--paramita-muted) !important;
+    font-size: .72rem !important;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.vendor-field-list {
+    line-height: 1.55;
+}
+
+.vendor-response-example {
+    max-height: 460px;
+    margin: .45rem 0 0;
+    padding: .9rem;
+    overflow: auto;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    background: #101828;
+    color: #e8f0ff;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: .75rem;
+    line-height: 1.55;
+    white-space: pre;
+}
+
+.vendor-checks {
+    display: grid;
+    gap: .45rem;
+    padding: 0 1rem 1rem;
+}
+
+.vendor-check {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: .75rem;
+    padding: .65rem .75rem;
+    border-radius: 7px;
+    font-size: .8rem;
+}
+
+.vendor-check.is-pass {
+    background: #ecfdf3;
+    color: #05603a;
+}
+
+.vendor-check.is-fail {
+    background: #fef3f2;
+    color: #912018;
+}
+
+.vendor-empty-state {
+    padding: 1rem;
+    color: var(--paramita-muted);
+    font-size: .85rem;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .vendor-endpoint-form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .vendor-endpoint-form > .btn {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .vendor-page {
+        padding: 1rem;
+    }
+
+    .vendor-header,
+    .vendor-connection-row {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .vendor-flow,
+    .vendor-grid-2,
+    .vendor-endpoint-form,
+    .vendor-auth-fields,
+    .vendor-guide-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vendor-flow > div {
+        border-right: 0;
+        border-bottom: 1px solid var(--paramita-border);
+    }
+
+    .vendor-flow > div:last-child {
+        border-bottom: 0;
+    }
+
+    .vendor-form-action {
+        grid-column: auto;
+        justify-content: stretch;
+    }
+
+    .vendor-form-action .btn {
+        width: 100%;
+    }
+
+    .vendor-url-field {
+        grid-column: auto;
+    }
+
+    .vendor-section-heading {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .vendor-section-heading .btn {
+        min-height: 44px;
+    }
+
+    .vendor-account-state {
+        justify-items: start;
+    }
+
+    .vendor-actions {
+        justify-content: flex-start;
+    }
+
+    .vendor-actions .btn {
+        min-height: 40px;
+    }
+
+    .vendor-check {
+        grid-template-columns: 1fr;
+        gap: .25rem;
+    }
+}
+
+/* --- Live auth example + authentication reference cards --- */
+.vendor-auth-example {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--paramita-border);
+}
+
+.vendor-auth-example[hidden] { display: none; }
+
+.vendor-example-code {
+    margin: .25rem 0 0;
+    padding: .75rem .9rem;
+    overflow-x: auto;
+    border-radius: 8px;
+    background: #101828;
+    color: #e8f0ff;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: .76rem;
+    line-height: 1.5;
+}
+
+.vendor-example-code + .vendor-guide-label { margin-top: .9rem; }
+
+.vendor-auth-list {
+    display: grid;
+    gap: 1rem;
+    padding: 1.15rem;
+}
+
+.vendor-auth-card {
+    padding: 1.1rem 1.15rem;
+    border: 1px solid var(--paramita-border);
+    border-radius: 12px;
+    background: #fff;
+}
+
+.vendor-auth-card-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: .75rem;
+    flex-wrap: wrap;
+}
+
+.vendor-auth-card-head h4 {
+    margin: 0;
+    color: var(--paramita-ink);
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.vendor-auth-card-head code {
+    color: var(--paramita-blue);
+    font-size: .76rem;
+}
+
+.vendor-auth-when {
+    margin: .35rem 0 0;
+    color: var(--paramita-muted);
+    font-size: .84rem;
+}
+
+.vendor-auth-needs ul {
+    margin: .25rem 0 0;
+    padding-left: 1.1rem;
+    color: #475467;
+    font-size: .8rem;
+}
+
+.vendor-auth-needs li small { color: var(--paramita-muted); }
+
+.vendor-auth-examples {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: .85rem;
+}
+
+@media (max-width: 768px) {
+    .vendor-auth-examples { grid-template-columns: 1fr; }
+    .vendor-connection-form { padding: 1rem; }
+    .vendor-auth-fieldset { padding: .9rem; }
+}
+
+/* --- Rincian autentikasi: 2 kolom rapi, field panjang melebar --- */
+.vendor-auth-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+}
+
+.vendor-auth-wide { grid-column: 1 / -1; }
+
+@media (max-width: 768px) {
+    .vendor-auth-fields { grid-template-columns: 1fr; }
+    .vendor-auth-wide { grid-column: auto; }
+}
+
+/* --- Status badge token otomatis --- */
+.status-token { background: #eaf4f9; color: #104b70; }
+
+/* --- Alur & koneksi tersimpan --- */
+.vendor-flow-hint {
+    margin: .75rem 1.15rem 0;
+    padding: .65rem .9rem;
+    border: 1px solid var(--paramita-border);
+    border-left: 3px solid var(--paramita-blue);
+    border-radius: 8px;
+    background: var(--paramita-soft);
+    color: #344054;
+    font-size: .82rem;
+}
+
+.vendor-connection-list-title {
+    margin: .25rem 0 .1rem;
+    color: var(--paramita-ink);
+    font-size: .9rem;
+    font-weight: 800;
+}
+
+.vendor-connection-list-title span {
+    padding: .1rem .45rem;
+    border-radius: 10px;
+    background: #eef2f7;
+    color: var(--paramita-muted);
+    font-size: .72rem;
+}
+
+.vendor-connection-detail {
+    border: 1px solid var(--paramita-border);
+    border-radius: 10px;
+    background: #fff;
+}
+
+.vendor-connection-detail .vendor-connection-row {
+    border: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.vendor-connection-id small { margin-top: .25rem; color: var(--paramita-muted); font-size: .72rem; }
+
+.vendor-connection-config {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .35rem 1.25rem;
+    margin: 0;
+    padding: .75rem .9rem;
+    border-top: 1px dashed var(--paramita-border);
+    background: #fbfcfe;
+}
+
+.vendor-connection-config > div { display: flex; gap: .5rem; align-items: baseline; min-width: 0; }
+.vendor-connection-config dt { color: var(--paramita-muted); font-size: .72rem; font-weight: 750; text-transform: uppercase; white-space: nowrap; }
+.vendor-connection-config dd { margin: 0; min-width: 0; overflow-wrap: anywhere; font-size: .76rem; }
+.vendor-connection-config code { color: #344054; }
+
+.vendor-connection-edit {
+    padding: 0 .75rem .75rem;
+    border-top: 1px solid var(--paramita-border);
+}
+
+.vendor-connection-edit .vendor-connection-form { padding: 1rem .5rem; border-bottom: 0; }
+
+.vendor-endpoint-conn-static {
+    grid-column: 1 / -1;
+    padding: .6rem .8rem;
+    border: 1px dashed var(--paramita-border);
+    border-radius: 8px;
+    background: var(--paramita-soft);
+}
+
+.vendor-endpoint-conn-static code { display: block; margin-top: .2rem; color: #344054; font-size: .74rem; overflow-wrap: anywhere; }
+
+@media (max-width: 768px) {
+    .vendor-connection-config { grid-template-columns: 1fr; }
+}
+
+/* --- Popup detail test --- */
+.test-error-box {
+    margin-bottom: 1rem;
+    padding: .9rem 1rem;
+    border: 1px solid #f1aeb5;
+    border-left: 4px solid var(--paramita-red, #b42318);
+    border-radius: 8px;
+    background: #fef3f2;
+    color: #841610;
+    font-size: .85rem;
+    line-height: 1.55;
+}
+
+.test-error-box p { margin: .35rem 0 0; overflow-wrap: anywhere; }
+.test-error-list { margin: .5rem 0 0; padding-left: 1.15rem; }
+.test-error-list li { overflow-wrap: anywhere; }
+.test-error-list li + li { margin-top: .35rem; }
+[data-testing-form] button[aria-busy="true"] { display: inline-flex; align-items: center; gap: .45rem; cursor: wait; }
+
+.test-checks { display: grid; gap: .45rem; }
+.test-checks .vendor-check { grid-template-columns: 190px minmax(0, 1fr); }
+.test-checks .vendor-check span { overflow-wrap: anywhere; }
+#test-report-sub { margin: .15rem 0 0; color: var(--paramita-muted); font-size: .78rem; overflow-wrap: anywhere; }
+
+/* Contract violation list: one short alert per line (see VendorPayloadContract). Each alert is a
+   full sentence, so it wraps like a normal alert — monospace/pre only makes it harder to read. */
+.vendor-check.is-fail span,
+.vendor-check span.vendor-contract-report {
+    display: block;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+    font-size: .82rem;
+    line-height: 1.5;
+}
+
+
+/* ---- Vendor reference-code page ---- */
+.vendor-ref-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.vendor-ref-card {
+    border: 1px solid var(--paramita-border);
+    border-radius: 16px;
+    background: var(--paramita-panel);
+    padding: 1.1rem;
+}
+
+.vendor-ref-card h4 {
+    margin: 0 0 .35rem;
+    font-size: 1rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.vendor-ref-wide {
+    grid-column: 1 / -1;
+}
+
+.vendor-ref-scroll {
+    max-height: 340px;
+    overflow: auto;
+    border: 1px solid var(--paramita-border);
+    border-radius: 12px;
+}
+
+.vendor-ref-scroll table thead th {
+    position: sticky;
+    top: 0;
+    background: #f9fafb;
+    font-size: .72rem;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    color: #475467;
+    z-index: 1;
+}
+
+.vendor-ref-scroll table td,
+.vendor-ref-scroll table th {
+    padding: .45rem .6rem;
+    font-size: .84rem;
+}
+
+@media (max-width: 767.98px) {
+    .vendor-ref-grid { grid-template-columns: 1fr; }
+    .vendor-ref-card { padding: .95rem; }
+}
+
+/* Integration onboarding: a task sequence, not a grid of decorative cards. */
+.vendor-progress-list { margin: 0; padding: 0 1.15rem; list-style: none; }
+.vendor-progress-list li {
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr) auto;
+    gap: .85rem;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--paramita-border);
+}
+.vendor-progress-list li:last-child { border-bottom: 0; }
+.vendor-progress-number { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid #b8c7d2; border-radius: 50%; color: #526575; font-size: .78rem; font-weight: 800; }
+.vendor-progress-list li.is-current .vendor-progress-number { border-color: var(--paramita-blue); color: var(--paramita-blue-dark); background: #eaf4f9; }
+.vendor-progress-list li.is-complete .vendor-progress-number { border-color: #14804a; color: #fff; background: #14804a; }
+.vendor-progress-list strong { display: block; color: var(--paramita-ink); font-size: .9rem; }
+.vendor-progress-list p { margin: .2rem 0 0; color: var(--paramita-muted); font-size: .8rem; line-height: 1.45; }
+.vendor-progress-list a { min-height: 40px; padding: .55rem .75rem; border: 1px solid var(--paramita-border); border-radius: 5px; color: var(--paramita-blue-dark); font-size: .78rem; font-weight: 750; text-decoration: none; white-space: nowrap; }
+.vendor-progress-list a:hover { border-color: var(--paramita-blue); background: #f3f8fb; }
+.vendor-progress-list a:focus-visible { outline: 2px solid var(--paramita-blue); outline-offset: 2px; }
+.vendor-definition-done { display: flex; gap: .75rem; margin: .25rem 1.15rem 1.15rem; padding: .8rem .9rem; border-left: 3px solid var(--paramita-blue); background: #f3f8fb; }
+.vendor-definition-done strong { flex: 0 0 auto; color: var(--paramita-ink); font-size: .8rem; }
+.vendor-definition-done span { color: #526575; font-size: .8rem; line-height: 1.5; }
+
+@media (max-width: 600px) {
+    .vendor-progress-list li { grid-template-columns: 34px minmax(0, 1fr); }
+    .vendor-progress-list a { grid-column: 2; width: fit-content; min-height: 44px; }
+    .vendor-definition-done { align-items: flex-start; flex-direction: column; gap: .25rem; }
+}

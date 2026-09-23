@@ -1,0 +1,17 @@
+{
+  "_comment": "INVALID: status_counts sums don't match total_orders (invariant check)",
+  "total_orders": 10,
+  "status_counts": {
+    "on_process": 2,
+    "on_delivery": 3,
+    "retry": 1,
+    "returned": 0,
+    "delivered": 5
+  },
+  "status_code_counts": {
+    "01": 2, "02": 3, "03": 1, "04": 0, "05": 0, "06": 0, "07": 5
+  },
+  "sla_counts": { "on_sla": 5, "over_sla": 2, "not_applicable": 0, "unknown": 3 },
+  "completed_sla_seconds_sum": 0,
+  "completed_sla_sample_count": 0
+}

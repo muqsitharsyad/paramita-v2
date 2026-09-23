@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://paramita-final.test/contracts/v1/inventory.summary.schema.json",
+  "title": "InventorySummary",
+  "description": "Vendor inventory summary response (PRD §8.2). data is an object, not array.",
+  "type": "object",
+  "required": ["data", "meta"],
+  "additionalProperties": false,
+  "properties": {
+    "data": { "$ref": "#/$defs/InventorySummaryRow" },
+    "meta": {
+      "type": "object",
+      "required": ["generated_at", "scope"],
+      "additionalProperties": true,
+      "properties": {
+        "generated_at": { "type": "string", "format": "date-time" },
+        "scope": {
+          "type": "object",
+          "required": ["ut_code", "program_codes"],
+          "additionalProperties": true,
+          "properties": {
+            "ut_code": { "type": ["string", "null"] },
+            "program_codes": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "InventorySummaryRow": {
+      "type": "object",
+      "required": [
+        "item_type", "stock_quantity", "record_count",
+        "shortage_count", "adequate_count", "surplus_count", "unknown_count"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "item_type":      { "type": "string", "enum": ["package", "book"] },
+        "stock_quantity": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+        "record_count":   { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+        "shortage_count": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+        "adequate_count": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+        "surplus_count":  { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+        "unknown_count":  { "type": "integer", "minimum": 0, "maximum": 9007199254740991 }
+      }
+    }
+  }
+}

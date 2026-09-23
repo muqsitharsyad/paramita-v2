@@ -1,0 +1,19 @@
+{
+  "data": {
+    "item_type": "package",
+    "stock_quantity": 120,
+    "record_count": 1,
+    "shortage_count": 1,
+    "adequate_count": 0,
+    "surplus_count": 0,
+    "unknown_count": 0
+  },
+  "meta": {
+    "generated_at": "2026-09-11T10:00:00Z",
+    "data_as_of": "2026-09-11T10:00:00Z",
+    "scope": {
+      "ut_code": "UN31.UT1",
+      "program_codes": []
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.entryarea {
+  position: relative;
+  .label-float {
+    position: absolute;
+    top: -5px;
+    left: 8px;
+    background-color: #fff;
+    font-size: 12px !important;
+    line-height: 12px !important;
+    padding: 0 5px !important;
+  }
+
+  .label-float-y {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    font-size: 12px !important;
+    line-height: 12px !important;
+    padding: 0 5px !important;
+    transition: 0.5s;
+    align-items: center;
+  }
+
+  .form-label-cari {
+    position: absolute;
+    top: 13px;
+    padding-left: 14px;
+  }
+
+  .form-control-cari {
+    height: 56px;
+    padding-left: 46px;
+  }
+
+  .icon-do {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  input:focus + .label-float-y,
+  input:valid + .label-float-y {
+    left: 5px !important;
+    transform: translateX(50%), scale(1) !important;
+  }
+}
+
+input[type="date"] {
+  width: 100%; /* kotak penuh selebar container */
+  max-width: 180px; /* batasi lebar maksimum */
+  height: 55px;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box; /* padding tidak menambah total lebar */
+  transition: border-color 0.3s;
+  background-color: #fff;
+}

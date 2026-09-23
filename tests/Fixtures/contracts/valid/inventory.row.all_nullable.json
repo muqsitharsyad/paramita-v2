@@ -1,0 +1,19 @@
+{
+  "_comment": "Valid: nullable fields all null — program_code null, required_quantity null, size_label null, etc.",
+  "id": "STOCK-NULLABLE-01",
+  "catalog_key": "BOOK-DEMO-02",
+  "item_type": "book",
+  "item_code": "BK-DEMO-02",
+  "edition": "2",
+  "title": "Buku Nullable DEMO",
+  "size_label": null,
+  "ut_code": "UT-DEMO-02",
+  "program_code": null,
+  "stock_quantity": 0,
+  "required_quantity": null,
+  "unit_weight_kg": null,
+  "total_weight_kg": null,
+  "total_height_cm": null,
+  "total_area_m2": null,
+  "updated_at": "2026-09-11T10:00:00Z"
+}

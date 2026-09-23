@@ -1,0 +1,259 @@
+.do-prodi-content {
+  .card-prodi {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 0 !important;
+    // width: 430px;
+
+    .card-prodi-kirim {
+      margin: 24px 12px 0 24px;
+      .text-judul-prodi-kirim {
+        font-size: 18px !important;
+        line-height: 28px !important;
+        padding-bottom: 4px;
+        margin-bottom: 0;
+      }
+
+      .text-subtitle-prodi-kirim {
+        font-size: 14px !important;
+        line-height: 22px !important;
+        color: #637381;
+      }
+    }
+
+    .dimensi-chart {
+      padding: 16px 20px 40px;
+      margin-top: -30px;
+      height: 400px;
+    }
+
+    .legend-chart {
+      max-height: 100px;
+      overflow-y: auto;
+      margin-top: -40px;
+      margin-bottom: 43px;
+      padding: 0 24px;
+
+      .responsive-legend {
+        gap: 4px;
+      }
+    }
+
+    .legend-chart-prodi {
+      max-height: 100px;
+      overflow-y: auto;
+      margin-top: -40px;
+      padding: 0 24px;
+
+      .responsive-legend {
+        gap: 4px;
+      }
+    }
+  }
+  .card-prodi-all {
+    display: flex;
+    align-items: flex-end;
+
+    .card-prodi-kirim {
+      .text-prodi-all {
+        background: #f2f1ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #4a3aff;
+        padding: 15px 20px;
+        gap: 2px;
+        font-size: 14px !important;
+        line-height: 16px !important;
+        .kotak-prodi-all {
+          width: 17.1px;
+          height: 17.1px;
+          border-radius: 50%;
+          border: 1px solid #4a3aff;
+          background: #4a3aff;
+        }
+      }
+    }
+
+    .kotak-prodi-penyedia {
+      margin-top: 18px;
+      .text-subtitle-prodi-kirim {
+        font-size: 12px !important;
+        line-height: 14px !important;
+        color: #1e1b39;
+        width: 90px;
+        margin-bottom: 0 !important;
+      }
+      .value-prodi-all {
+        font-size: 14px !important;
+        line-height: 16px !important;
+        color: #9291a5;
+      }
+    }
+  }
+}
+tspan.value-total-prodi {
+  fill: #1e1b39 !important;
+  font-size: 25px !important;
+  font-weight: bold;
+}
+tspan.text-total-prodi {
+  fill: #9291a5 !important;
+  font-size: 14px !important;
+  font-weight: 600;
+}
+
+.divider {
+  margin-top: 24px;
+  border-top: 2px dashed rgba(145, 158, 171, 0.2);
+  margin-bottom: 24px;
+}
+
+.divider-black {
+  border-top: 2px solid rgb(0, 0, 0);
+  width: 50%;
+  margin: 0px 5px;
+}
+
+.legend-scroll {
+  max-height: 200px; /* batas tinggi legend */
+  overflow-y: auto; /* scroll ke bawah */
+  padding-right: 10px;
+}
+
+// @media (min-width: 1400px) and (max-width: 1600px) {
+//   .do-prodi-content {
+//     .card-prodi {
+//       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+//       padding: 0 !important;
+//       width: 300px;
+//       height: 10%;
+
+//       .card-prodi-kirim {
+//         margin: 24px 12px 0 24px;
+//         .text-judul-prodi-kirim {
+//           font-size: 18px !important;
+//           line-height: 28px !important;
+//           padding-bottom: 4px;
+//           margin-bottom: 0;
+//         }
+
+//         .text-subtitle-prodi-kirim {
+//           font-size: 14px !important;
+//           line-height: 22px !important;
+//           color: #637381;
+//         }
+//       }
+
+//       .dimensi-chart {
+//         padding: 0px 20px;
+//         margin-top: 0px;
+//       }
+
+//       .legend-chart {
+//         max-height: 100px;
+//         overflow-y: auto;
+//         margin-top: -40px;
+//         margin-bottom: 43px;
+//         padding: 0 24px;
+//         z-index: 1;
+
+//         .responsive-legend {
+//           gap: 4px;
+//         }
+//       }
+
+//       .legend-chart-prodi {
+//         max-height: 100px;
+//         overflow-y: auto;
+//         margin-top: -40px;
+//         padding: 0 24px;
+//         z-index: 1;
+
+//         .responsive-legend {
+//           gap: 4px;
+//         }
+//       }
+//     }
+//     .card-prodi-all {
+//       display: flex;
+//       align-items: flex-end;
+//       height: 545px;
+//       width: 193px;
+
+//       .card-prodi-kirim {
+//         .text-prodi-all {
+//           background: #f2f1ff;
+//           display: flex;
+//           justify-content: center;
+//           align-items: center;
+//           color: #4a3aff;
+//           padding: 15px 20px;
+//           gap: 2px;
+//           font-size: 14px !important;
+//           line-height: 16px !important;
+//           .kotak-prodi-all {
+//             width: 17.1px;
+//             height: 17.1px;
+//             border-radius: 50%;
+//             border: 1px solid #4a3aff;
+//             background: #4a3aff;
+//           }
+//         }
+//       }
+
+//       .kotak-prodi-penyedia {
+//         margin-top: 18px;
+//         .text-subtitle-prodi-kirim {
+//           font-size: 12px !important;
+//           line-height: 14px !important;
+//           color: #1e1b39;
+//           width: 90px;
+//           margin-bottom: 0 !important;
+//         }
+//         .value-prodi-all {
+//           font-size: 14px !important;
+//           line-height: 16px !important;
+//           color: #9291a5;
+//         }
+//       }
+//     }
+//   }
+//   tspan.value-total-prodi {
+//     fill: #1e1b39 !important;
+//     font-size: 25px !important;
+//     font-weight: bold;
+//   }
+//   tspan.text-total-prodi {
+//     fill: #9291a5 !important;
+//     font-size: 14px !important;
+//     font-weight: 600;
+//   }
+
+//   .divider {
+//     margin-top: 24px;
+//     border-top: 2px dashed rgba(145, 158, 171, 0.2);
+//     margin-bottom: 24px;
+//   }
+
+//   .legend-scroll {
+//     max-height: 200px; /* batas tinggi legend */
+//     overflow-y: auto; /* scroll ke bawah */
+//     padding-right: 10px;
+//   }
+
+//   .highcharts-announcer-container {
+//     display: none;
+//     height: 0px;
+//   }
+
+//   #highcharts-screen-reader-region-before-1 {
+//     display: none;
+//   }
+
+//   #highcharts-screen-reader-region-after-1 {
+//     display: none;
+//   }
+//   .highcharts-credits {
+//     display: none;
+//   }
+// }

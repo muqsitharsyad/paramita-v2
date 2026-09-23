@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://paramita-final.test/contracts/v1/summary.row.schema.json",
+  "title": "SummaryRow",
+  "description": "Order summary aggregate — used in orders.summary and grouped responses (PRD §8.7)",
+  "type": "object",
+  "required": [
+    "total_orders",
+    "status_counts",
+    "status_code_counts",
+    "sla_counts",
+    "completed_sla_seconds_sum",
+    "completed_sla_sample_count"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "total_orders": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+    "status_counts": {
+      "type": "object",
+      "required": ["on_process", "on_delivery", "retry", "returned", "delivered"],
+      "additionalProperties": false,
+      "properties": {
+        "on_process":  { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+        "on_delivery": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+        "retry":       { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+        "returned":    { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+        "delivered":   { "type": "integer", "minimum": 0, "maximum": 9007199254740991 }
+      }
+    },
+    "status_code_counts": {
+      "type": "object",
+      "required": ["01","02","03","04","05","06","07"],
+      "additionalProperties": false,
+      "properties": {
+        "01": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+        "02": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+        "03": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+        "04": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+        "05": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+        "06": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+        "07": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 }
+      }
+    },
+    "sla_counts": {
+      "type": "object",
+      "required": ["on_sla", "over_sla", "not_applicable", "unknown"],
+      "additionalProperties": false,
+      "properties": {
+        "on_sla":         { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+        "over_sla":       { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+        "not_applicable": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+        "unknown":        { "type": "integer", "minimum": 0, "maximum": 9007199254740991 }
+      }
+    },
+    "completed_sla_seconds_sum":   { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+    "completed_sla_sample_count":  { "type": "integer", "minimum": 0, "maximum": 9007199254740991 }
+  }
+}

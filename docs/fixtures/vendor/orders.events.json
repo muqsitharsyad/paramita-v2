@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "id": "EVENT-1",
+      "occurred_at": "2026-09-09T09:00:00Z",
+      "title": "Warehouse",
+      "description": null,
+      "location": null,
+      "process_status_code": "01"
+    },
+    {
+      "id": "EVENT-2",
+      "occurred_at": "2026-09-10T08:00:00Z",
+      "title": "Dikirim",
+      "description": null,
+      "location": null,
+      "process_status_code": "02"
+    },
+    {
+      "id": "EVENT-3",
+      "occurred_at": "2026-09-11T08:00:00Z",
+      "title": "Diterima",
+      "description": null,
+      "location": null,
+      "process_status_code": "07"
+    }
+  ],
+  "meta": {
+    "generated_at": "2026-09-11T10:00:00Z",
+    "data_as_of": "2026-09-11T10:00:00Z",
+    "scope": {
+      "ut_code": "UN31.UT1",
+      "program_codes": []
+    },
+    "limit": 25,
+    "offset": 0,
+    "total_filtered": 3,
+    "has_more": false
+  }
+}

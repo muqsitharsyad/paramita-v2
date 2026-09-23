@@ -1,0 +1,215 @@
+.card {
+  .card-body {
+    padding: 0px 16px 0px 0px;
+  }
+}
+
+.card-paket-penyedia {
+  width: 344px !important;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15); /* bayangan lembut */
+  transition: transform 0.3s;
+
+  .card-body {
+    margin: 24px 16px 0px 24px;
+  }
+
+  .card-title {
+    font-size: 18px !important;
+    line-height: 28px !important;
+    margin: 0;
+  }
+
+  .card-subtitle {
+    font-size: 14px !important;
+    line-height: 22px !important;
+    font-weight: 400;
+    color: #637381;
+  }
+
+  &:hover {
+    transform: scale(1.03); /* efek membesar saat hover */
+  }
+}
+
+.card-paket-do {
+  width: 15% !important;
+  min-width: 230px !important;
+  padding-bottom: 52px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  .border-do-penyedia {
+    margin: 24px 16px 0px 16px;
+    font-size: 14px !important;
+    line-height: 22px;
+    padding-bottom: 24px;
+    border-block-end: 1px dashed rgba(145, 158, 171, 0.16);
+
+    .card-subtitle {
+      font-size: 14px !important;
+      line-height: 22px !important;
+    }
+
+    .card-title {
+      padding-top: 16px !important;
+      font-size: 32px !important;
+      line-height: 48px !important;
+    }
+  }
+
+  .text-do-penyedia {
+    margin: 48px 16px 0px 16px;
+
+    .kotak-nama-penyedia {
+      width: 100px;
+      display: flex;
+      flex-wrap: wrap;
+      .text-judul-total {
+        font-size: 14px !important;
+        line-height: 22px !important;
+        color: #637381;
+      }
+    }
+
+    .text-hasil-do-penyedia {
+      font-size: 20px !important;
+      line-height: 30px !important;
+    }
+  }
+}
+
+.card-do-ut-daerah-tabs {
+  padding-top: 24px;
+}
+
+.card-3-column-justify {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+.card-3-column {
+  width: 420px;
+}
+
+.card-4-column {
+  width: 400px;
+}
+
+.card-text-judul {
+  padding-left: 24px;
+  padding-top: 24px;
+  font-size: 18px !important;
+  line-height: 28px !important;
+  margin-bottom: 0px !important;
+}
+
+.card-text-subtitle {
+  margin-top: 4px;
+  padding-left: 24px;
+  font-size: 14px !important;
+  line-height: 22px !important;
+  color: #637381 !important;
+  margin-bottom: 0px !important;
+}
+
+.card-bar {
+  padding: 0px 18px 24px;
+}
+
+.card-header-judul {
+  padding-left: 24px;
+  padding-left: 32px;
+  font-size: 18px !important;
+  line-height: 28px !important;
+  margin-bottom: 46px;
+}
+
+.card-body-input {
+  margin: 20px !important;
+}
+
+.card-valket {
+  margin-top: 12px;
+}
+
+.card-value-paket {
+  font-size: 14px !important;
+  line-height: 22px !important;
+  margin-bottom: 0px !important;
+}
+
+.card-keterangan {
+  margin-bottom: 0px !important;
+  margin-top: 0;
+  font-size: 14px !important;
+  line-height: 22px !important;
+  color: #212b36;
+}
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+  .card-3-column {
+    width: 360px;
+
+    .chart-3-column {
+      height: 300px;
+    }
+  }
+  .card-4-column {
+    width: 250px;
+    .kotak-penyedia {
+      border: 1px solid red !important;
+      width: 150px !important;
+    }
+  }
+
+  @media (min-width: 1200px) and (max-width: 1399px) {
+    .card-3-column {
+      width: 290px;
+
+      .chart-3-column {
+        height: 200px;
+      }
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1199.99px) {
+    .card-3-column-justify {
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+    }
+    .card-3-column {
+      width: 600px;
+      .chart-3-column {
+        height: 600px;
+      }
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991.99px) {
+    .card-3-column-justify {
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+    }
+    .card-3-column {
+      width: 450px;
+      .chart-3-column {
+        height: 400px;
+      }
+    }
+  }
+
+  @media (min-width: 576px) and (max-width: 767.99px) {
+    .card-3-column-justify {
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+    }
+    .card-3-column {
+      width: 530px;
+      .chart-3-column {
+        height: 400px;
+      }
+    }
+  }
+}

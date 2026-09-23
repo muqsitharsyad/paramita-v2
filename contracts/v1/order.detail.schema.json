@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://paramita-final.test/contracts/v1/order.detail.schema.json",
+  "title": "OrderDetail",
+  "description": "Full order detail from orders.detail — OrderRow plus delivery and SLA fields (PRD §8.5)",
+  "type": "object",
+  "required": [
+    "id", "order_number", "period_code", "ordered_at",
+    "student_name",
+    "province", "city", "district", "village",
+    "ut_code", "program_code",
+    "process_status_code",
+    "updated_at",
+    "package_code", "package_title",
+    "carrier_name", "tracking_number",
+    "paid_at", "handed_to_carrier_at", "completed_at",
+    "sla_target_days", "sla_elapsed_days", "sla_status",
+    "latitude", "longitude",
+    "latest_event",
+    "proof_of_delivery_url"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "id":                    { "type": "string", "maxLength": 100 },
+    "order_number":          { "type": "string", "maxLength": 255 },
+    "period_code":           { "type": "string", "maxLength": 10, "pattern": "^[0-9]{4,5}$" },
+    "ordered_at":            { "type": "string", "format": "date-time" },
+    "student_name":          { "type": "string", "maxLength": 255 },
+    "province":              { "type": ["string", "null"], "maxLength": 255 },
+    "city":                  { "type": ["string", "null"], "maxLength": 255 },
+    "district":              { "type": ["string", "null"], "maxLength": 255 },
+    "village":               { "type": ["string", "null"], "maxLength": 255 },
+    "ut_code":               { "type": "string", "maxLength": 100 },
+    "program_code":          { "type": "string", "maxLength": 100 },
+    "process_status_code":   { "type": "string", "enum": ["01","02","03","04","05","06","07"] },
+    "updated_at":            { "type": "string", "format": "date-time" },
+    "package_code":          { "type": ["string", "null"], "maxLength": 100 },
+    "package_title":         { "type": ["string", "null"], "maxLength": 500 },
+    "carrier_name":          { "type": ["string", "null"], "maxLength": 255 },
+    "tracking_number":       { "type": ["string", "null"], "maxLength": 255 },
+    "paid_at":               { "type": ["string", "null"], "format": "date-time" },
+    "handed_to_carrier_at":  { "type": ["string", "null"], "format": "date-time" },
+    "completed_at":          { "type": ["string", "null"], "format": "date-time" },
+    "sla_target_days":       { "type": ["integer", "null"], "minimum": 0 },
+    "sla_elapsed_days":      { "type": ["number", "null"], "minimum": 0 },
+    "sla_status":            { "type": "string", "enum": ["on_sla", "over_sla", "not_applicable", "unknown"] },
+    "latitude":              { "type": ["number", "null"], "minimum": -90, "maximum": 90 },
+    "longitude":             { "type": ["number", "null"], "minimum": -180, "maximum": 180 },
+    "latest_event":          { "oneOf": [{ "$ref": "#/$defs/EventRow" }, { "type": "null" }] },
+    "proof_of_delivery_url": { "type": ["string", "null"], "format": "uri" }
+  },
+  "$defs": {
+    "EventRow": {
+      "type": "object",
+      "required": ["id", "occurred_at", "title", "description", "location", "process_status_code"],
+      "additionalProperties": true,
+      "properties": {
+        "id":                  { "type": "string", "maxLength": 100 },
+        "occurred_at":         { "type": "string", "format": "date-time" },
+        "title":               { "type": "string", "maxLength": 255 },
+        "description":         { "type": ["string", "null"], "maxLength": 1000 },
+        "location":            { "type": ["string", "null"], "maxLength": 255 },
+        "process_status_code": { "type": ["string", "null"], "enum": ["01","02","03","04","05","06","07", null] }
+      }
+    }
+  }
+}

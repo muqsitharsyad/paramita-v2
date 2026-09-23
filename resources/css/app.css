@@ -1,0 +1,15 @@
+@import './admin.css';
+@import './admin-review.css';
+@import './vendor-portal.css';
+@import './vendor-contracts.css';
+@import './shell.css';
+@import './analytics.css';
+
+:root {
+    --bs-font-sans-serif: 'Public Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    font-family: var(--bs-font-sans-serif);
+    background-color: #fff;
+}

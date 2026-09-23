@@ -1,0 +1,15 @@
+{
+  "_comment": "INVALID: process_status_code must be string 01..07, not integer",
+  "id": "ORDER-BAD-01",
+  "order_number": "DO-BAD-01",
+  "ordered_at": "2026-09-09T08:00:00Z",
+  "student_name": "Mahasiswa DEMO",
+  "province": null,
+  "city": null,
+  "district": null,
+  "village": null,
+  "ut_code": "UT-DEMO-01",
+  "program_code": "PRODI-DEMO-01",
+  "process_status_code": 7,
+  "updated_at": "2026-09-11T08:00:00Z"
+}

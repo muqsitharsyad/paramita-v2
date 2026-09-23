@@ -1,0 +1,13 @@
+.analisis-sla-content {
+  .card-sla-penyedia {
+    width: 500px;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+  .analisis-sla-content {
+    .card-sla-penyedia {
+      width: 400px;
+    }
+  }
+}

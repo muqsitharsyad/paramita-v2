@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://paramita-final.test/contracts/v1/inventory.lookup.row.schema.json",
+  "title": "InventoryLookupRow",
+  "description": "Single row from inventory.lookup — one entry per catalog_key (PRD §8.1)",
+  "type": "object",
+  "required": ["catalog_key", "stock_quantity", "availability", "updated_at"],
+  "additionalProperties": true,
+  "properties": {
+    "catalog_key":    { "type": "string", "maxLength": 100 },
+    "stock_quantity": { "type": ["integer", "null"], "minimum": 0, "maximum": 9007199254740991 },
+    "availability":   { "type": "string", "enum": ["available", "not_supplied"] },
+    "updated_at":     { "type": ["string", "null"], "format": "date-time" }
+  }
+}

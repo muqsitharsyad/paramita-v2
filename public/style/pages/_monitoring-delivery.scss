@@ -1,0 +1,436 @@
+.content {
+  margin-top: 24px;
+  margin-left: 40px;
+
+  .mondev-content {
+    .card-group-do {
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+    .border-right-do {
+      border-right: 3px dashed rgba(145, 158, 171, 0.16);
+    }
+
+    .border-card {
+      padding: 16px 0px 20px;
+      border-left: 1px solid rgba(145, 158, 171, 0.2);
+      border-top: 1px solid rgba(145, 158, 171, 0.2);
+      border-bottom: 1px solid rgba(145, 158, 171, 0.2);
+      border-start-start-radius: 16px;
+      border-bottom-left-radius: 16px;
+    }
+
+    .border-card:not(:first-child) {
+      border-left: none;
+      border-start-start-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+
+    .border-card:last-child {
+      border-right: 1px solid rgba(145, 158, 171, 0.2);
+      border-start-end-radius: 16px;
+      border-bottom-right-radius: 16px;
+    }
+
+    .circle-do-blue {
+      position: relative;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #00b8d9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: rotate 4s infinite linear;
+    }
+
+    .circle-do-blue::before {
+      content: "";
+      position: absolute;
+      height: 80%;
+      width: 80%;
+      background: white;
+      border-radius: 50%;
+      z-index: 4;
+    }
+
+    .loader-blue {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      background: conic-gradient(transparent 280deg, aqua);
+      transform: rotate(calc(120deg * var(--i)));
+    }
+
+    .circle-do-green {
+      position: relative;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #22c55e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: rotate 4s infinite linear;
+    }
+
+    .circle-do-green::before {
+      content: "";
+      position: absolute;
+      height: 80%;
+      width: 80%;
+      background: white;
+      border-radius: 50%;
+      z-index: 4;
+    }
+
+    .loader-green {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      background: conic-gradient(transparent 280deg, rgb(0, 255, 34));
+      transform: rotate(calc(120deg * var(--i)));
+    }
+
+    .circle-do-delivery {
+      position: relative;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #c56122;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: rotate 4s infinite linear;
+    }
+
+    .circle-do-delivery::before {
+      content: "";
+      position: absolute;
+      height: 80%;
+      width: 80%;
+      background: white;
+      border-radius: 50%;
+      z-index: 4;
+    }
+
+    .loader-delivery {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      background: conic-gradient(transparent 280deg, rgb(255, 128, 0));
+      transform: rotate(calc(120deg * var(--i)));
+    }
+
+    .circle-do-warning {
+      position: relative;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #ffab00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: rotate 4s infinite linear;
+    }
+
+    .circle-do-warning::before {
+      content: "";
+      position: absolute;
+      height: 80%;
+      width: 80%;
+      background: white;
+      border-radius: 50%;
+      z-index: 4;
+    }
+
+    .loader-warning {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      background: conic-gradient(transparent 280deg, rgb(255, 136, 0));
+      transform: rotate(calc(120deg * var(--i)));
+    }
+
+    .circle-do-amber {
+      position: relative;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #ff5630;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: rotate 4s infinite linear;
+    }
+
+    .circle-do-amber::before {
+      content: "";
+      position: absolute;
+      height: 80%;
+      width: 80%;
+      background: white;
+      border-radius: 50%;
+      z-index: 4;
+    }
+
+    .loader-amber {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      background: conic-gradient(transparent 280deg, rgb(230, 146, 30));
+      transform: rotate(calc(120deg * var(--i)));
+    }
+
+    .circle-do-secondary {
+      position: relative;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #637381;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: rotate 4s infinite linear;
+    }
+
+    .circle-do-secondary::before {
+      content: "";
+      position: absolute;
+      height: 80%;
+      width: 80%;
+      background: white;
+      border-radius: 50%;
+      z-index: 4;
+    }
+
+    .loader-secondary {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      background: conic-gradient(transparent 280deg, #94a1adbd);
+      transform: rotate(calc(120deg * var(--i)));
+    }
+
+    @keyframes rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .card-title {
+      padding-top: 20px;
+      font-size: 16px !important;
+      line-height: 24px !important;
+    }
+
+    .card-text {
+      font-size: 20px !important;
+      line-height: 30px !important;
+    }
+  }
+}
+
+.section-card-do {
+  margin-top: 24px;
+}
+
+.section-do-ut-daerah-tabs {
+  margin-top: 24px;
+  margin-bottom: 40px;
+
+  .card-do-ut-daerah-tabs {
+    border: 0;
+  }
+
+  .card-title-do-ut-daerah {
+    padding-left: 24px;
+    font-size: 18px !important;
+    line-height: 28px !important;
+    margin-bottom: 45px;
+
+    button.btn {
+      padding: 0px !important;
+    }
+
+    .text-filter {
+      font-size: 14px !important;
+    }
+
+    img.filter-data {
+      width: 20px !important;
+      height: 20px !important;
+    }
+  }
+}
+
+.section-modal-detail-do-mahasiswa {
+  .judul-detail-modal {
+    font-size: 18px !important;
+    line-height: 28px !important;
+    margin-left: 24px;
+    margin-top: 24px;
+    margin-bottom: 48px;
+  }
+
+  .icon-close {
+    width: 30px;
+    height: 30px;
+    border: 1px solid red;
+    z-index: 2;
+    border-radius: 50%;
+    position: relative;
+    background-color: red;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    top: -10px;
+    left: 10px;
+
+    .button-icon-close {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+    }
+
+    .btn-close:focus {
+      box-shadow: none !important;
+    }
+  }
+
+  .card {
+    margin-left: 46.5px;
+
+    .informasi-do-mahasiswa {
+      max-width: 440px;
+      min-width: 344px;
+      padding-left: 24px;
+
+      .judul-detail-modal-info {
+        font-size: 18px !important;
+        line-height: 28px !important;
+        margin-bottom: 24px;
+      }
+
+      .do-alamat-mahasiswa {
+        max-width: 300px;
+        margin-right: 24px;
+
+        .text-do-mahasiswa {
+          font-size: 14px !important;
+          line-height: 22px !important;
+          padding-bottom: 4px;
+        }
+
+        .text-do-nama {
+          font-size: 15px !important;
+          line-height: 22px !important;
+          padding-bottom: 30px;
+        }
+
+        .text-do-alamat {
+          font-size: 15px !important;
+          line-height: 22px !important;
+          padding-bottom: 4px;
+        }
+
+        p.title-sub-alamat {
+          font-size: 14px !important;
+          line-height: 22px !important;
+          margin-bottom: 4px;
+          .subtitle-sub-alamat {
+            color: #637381;
+          }
+        }
+      }
+
+      .resi-delivery {
+        margin-bottom: 12px;
+        .title-resi-delivery {
+          width: 120px;
+          font-size: 14px !important;
+          line-height: 22px !important;
+          color: #919eab;
+        }
+
+        .subtitle-resi-delivery {
+          width: 250px;
+          margin-bottom: 0px !important;
+        }
+        .subtitle-status {
+          margin-bottom: 0px !important;
+          background-color: rgba(34, 197, 94, 0.16);
+          color: #118d57;
+          font-size: 12px !important;
+          line-height: 20px !important;
+        }
+      }
+    }
+  }
+
+  .history-track-do {
+    margin-left: 48px;
+    min-width: 240px;
+    max-width: 300px;
+
+    .judul-detail-modal-histori {
+      font-size: 18px !important;
+      line-height: 28px !important;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      margin-bottom: 0px !important;
+    }
+  }
+
+  .order-kirim-pod {
+    margin-top: 72px;
+    margin-left: 46.5px;
+
+    .border-order-kirim-pod {
+      width: 260px;
+      border: 1px dashed rgba(145, 158, 171, 0.2);
+      padding: 20px 20px 0;
+      border-radius: 16px;
+
+      .text-detail-order {
+        font-size: 14px !important;
+        line-height: 22px !important;
+        color: #919eab;
+        padding-bottom: 4px;
+      }
+
+      .subtext-detail-order {
+        padding-bottom: 16px;
+      }
+
+      .subtext-detail-order:last-child {
+        padding-bottom: 16px;
+      }
+    }
+
+    .border-bukti-pod {
+      margin-top: 24px;
+      width: 260px;
+      border: 1px dashed rgba(145, 158, 171, 0.2);
+      padding: 20px;
+      border-radius: 16px;
+
+      .text-judul-kirim {
+        font-size: 18px !important;
+        line-height: 28px !important;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+.btn-closed {
+  margin: 48px 24px 24px auto;
+  background: #fff;
+  border: 1px solid rgba(145, 158, 171, 0.24);
+  border-radius: 8px;
+}

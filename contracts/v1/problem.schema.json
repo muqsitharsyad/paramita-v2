@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://paramita-final.test/contracts/v1/problem.schema.json",
+  "title": "Problem",
+  "description": "RFC 9457 Problem Details for HTTP APIs — used in all Paramita error responses (PRD §8.8)",
+  "type": "object",
+  "required": ["type", "title", "status", "detail", "instance", "request_id"],
+  "additionalProperties": true,
+  "properties": {
+    "type":       { "type": "string", "format": "uri", "description": "Stable URI for this problem type" },
+    "title":      { "type": "string", "maxLength": 255 },
+    "status":     { "type": "integer", "minimum": 100, "maximum": 599 },
+    "detail":     { "type": "string", "maxLength": 1000 },
+    "instance":   { "type": "string", "maxLength": 2048, "description": "Request path without query personal/auth params" },
+    "request_id": { "type": "string", "maxLength": 100 }
+  }
+}

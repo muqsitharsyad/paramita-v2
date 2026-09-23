@@ -1,0 +1,140 @@
+.monret-content {
+  .bar-dimensi {
+    width: 1300px;
+  }
+  .dimensi-penyedia-all {
+    padding: 0px;
+    width: 300px;
+  }
+  .card {
+    border: none !important;
+    .text-prodi-all {
+      background: #f2f1ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #4a3aff;
+      padding: 15px 20px;
+      gap: 2px;
+      font-size: 14px !important;
+      line-height: 16px !important;
+      .kotak-prodi-all {
+        width: 17.1px;
+        height: 17.1px;
+        border-radius: 50%;
+        border: 1px solid #4a3aff;
+        background: #4a3aff;
+        margin-right: 3px;
+      }
+    }
+    .kotak-prodi-penyedia {
+      .kotak-penyedia {
+        width: 150px;
+
+        .text-subtitle-prodi-kirim {
+          font-size: 12px !important;
+          line-height: 14px !important;
+        }
+      }
+
+      .value-prodi-all {
+        font-size: 12px !important;
+        line-height: 16px !important;
+        color: #9291a5;
+      }
+    }
+  }
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: flex-end;
+
+  .btn {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 15px;
+    padding: 6px 16px;
+    font-weight: 500;
+    transition: 0.2s ease;
+  }
+}
+
+.filter-buttons .btn .border-kalender {
+  padding: 2px 8px;
+  border-radius: 4px;
+  transition: 0.2s ease;
+}
+
+/* Default */
+.filter-buttons .btn:not(.active) {
+  background: F8F8FF;
+  color: #9291a5;
+  border: 1px solid #f8f8ff;
+}
+
+/* Saat tombol aktif */
+.filter-buttons .btn.active {
+  background: #f8f8ff !important;
+  color: #fff !important;
+  border: 1px solid #f8f8ff;
+}
+
+/* Efek khusus untuk border-kalender saat active */
+.filter-buttons .btn.active .border-kalender {
+  background: #1e1b39;
+  border-radius: 13px;
+  color: #fff;
+}
+
+/* Hover efek */
+.filter-buttons .btn:hover:not(.active) {
+  background: #f2f2f2;
+}
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+  .monret-content {
+    .bar-dimensi {
+      width: 930px;
+    }
+    .dimensi-penyedia-all {
+      padding: 0px;
+      width: 250px;
+    }
+    .card {
+      .text-prodi-all {
+        .kotak-prodi-all {
+          width: 11px;
+          height: 11px;
+          border-radius: 50%;
+          border: 1px solid #4a3aff;
+          background: #4a3aff;
+          margin-right: 3px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .monret-content {
+    .bar-dimensi {
+      // width: 800px;
+      width: calc(100vw - 599px);
+    }
+    .dimensi-penyedia-all {
+      padding: 0px;
+      width: 300px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.99px) {
+  .monret-content {
+    .bar-dimensi {
+      width: 100vw;
+    }
+    .dimensi-penyedia-all {
+      padding: 24px;
+    }
+  }
+}

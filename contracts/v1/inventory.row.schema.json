@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://paramita-final.test/contracts/v1/inventory.row.schema.json",
+  "title": "InventoryRow",
+  "description": "Single stock record from inventory.list or inventory.lookup (PRD §8.1)",
+  "type": "object",
+  "required": [
+    "id", "catalog_key", "item_type", "item_code", "edition", "title",
+    "size_label", "ut_code", "program_code",
+    "stock_quantity", "required_quantity",
+    "unit_weight_kg", "total_weight_kg", "total_height_cm", "total_area_m2",
+    "updated_at"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "id":                { "type": "string", "maxLength": 100 },
+    "catalog_key":       { "type": "string", "maxLength": 100 },
+    "item_type":         { "type": "string", "enum": ["package", "book"] },
+    "item_code":         { "type": "string", "maxLength": 100 },
+    "edition":           { "type": "string", "maxLength": 100 },
+    "title":             { "type": "string", "maxLength": 500 },
+    "size_label":        { "type": ["string", "null"], "maxLength": 255 },
+    "ut_code":           { "type": "string", "maxLength": 100 },
+    "program_code":      { "type": ["string", "null"], "maxLength": 100 },
+    "stock_quantity":    { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+    "required_quantity": { "type": ["integer", "null"], "minimum": 0, "maximum": 9007199254740991 },
+    "unit_weight_kg":    { "type": ["number", "null"], "minimum": 0 },
+    "total_weight_kg":   { "type": ["number", "null"], "minimum": 0 },
+    "total_height_cm":   { "type": ["number", "null"], "minimum": 0 },
+    "total_area_m2":     { "type": ["number", "null"], "minimum": 0 },
+    "updated_at":        { "type": "string", "format": "date-time" }
+  }
+}
