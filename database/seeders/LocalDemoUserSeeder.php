@@ -119,10 +119,10 @@ class LocalDemoUserSeeder extends Seeder
 
     private function guardLocalOnly(): bool
     {
-        // Skip silently in production: this seeder is registered in DatabaseSeeder so
-        // `migrate --seed` keeps working everywhere, but demo users must only ever exist
-        // on a local/dev database.
-        if (app()->environment('production')) {
+        // Skip silently in production or testing: demo users are only meaningful
+        // in a local development database. CI runs in 'testing' environment and
+        // does not have PARAMITA_INTEGRATION_KEY set.
+        if (app()->environment('production', 'testing')) {
             return false;
         }
 
@@ -130,7 +130,7 @@ class LocalDemoUserSeeder extends Seeder
         // vendor credentials. Without it the encrypter would throw on boot anyway.
         $rawKey = getenv('PARAMITA_INTEGRATION_KEY') ?: config('app.paramita_integration_key');
         if (empty($rawKey)) {
-            throw new \RuntimeException('PARAMITA_INTEGRATION_KEY must be set before seeding demo users.');
+            return false;
         }
 
         return true;
