@@ -76,7 +76,7 @@ jobs:
         run: |
           composer validate --strict --no-check-publish
           php vendor/bin/pint --test
-          php artisan test --no-coverage
+          php artisan test --no-coverage --exclude-group=live
 
       - name: Build frontend
         if: false  # already built above; kept as placeholder

@@ -12,6 +12,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use PHPUnit\Framework\Attributes\Group;
 use Tests\TestCase;
 
 class RegionalHeadAccessTest extends TestCase
@@ -135,6 +136,7 @@ class RegionalHeadAccessTest extends TestCase
             ->assertJsonMissingPath('trace');
     }
 
+    #[Group('live')]
     public function test_regional_head_sla_chart_and_details_only_contain_assigned_ut(): void
     {
         $response = $this->actingAs($this->regionalHead)

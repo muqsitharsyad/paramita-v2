@@ -7,8 +7,10 @@ namespace Tests\Feature\Repair;
 use App\Models\User;
 use Database\Seeders\ParamitaRepairSeeder;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use PHPUnit\Framework\Attributes\Group;
 use Tests\TestCase;
 
+#[Group('live')]
 class LiveVendorMockIntegrationTest extends TestCase
 {
     // This suite reads real seeded vendors/bindings from the shared development database and also
