@@ -43,6 +43,11 @@ jobs:
       - name: Install PHP dependencies
         run: composer install --no-interaction --prefer-dist --no-progress
 
+      - name: Install Node dependencies and build frontend
+        run: |
+          npm ci
+          npm run build
+
       - name: Prepare application
         env:
           APP_ENV: testing
@@ -52,6 +57,7 @@ jobs:
           DB_DATABASE: paramita_final
           DB_USERNAME: root
           DB_PASSWORD: ""
+          PARAMITA_INTEGRATION_KEY: "base64:dGVzdGtleXRlc3RrZXl0ZXN0a2V5dGVzdGtleTEyMzQ="
         run: |
           cp .env.example .env
           php artisan key:generate
@@ -66,12 +72,14 @@ jobs:
           DB_DATABASE: paramita_final
           DB_USERNAME: root
           DB_PASSWORD: ""
+          PARAMITA_INTEGRATION_KEY: "base64:dGVzdGtleXRlc3RrZXl0ZXN0a2V5dGVzdGtleTEyMzQ="
         run: |
           composer validate --strict --no-check-publish
           php vendor/bin/pint --test
           php artisan test --no-coverage
 
       - name: Build frontend
+        if: false  # already built above; kept as placeholder
         run: |
           npm ci
           npm run build

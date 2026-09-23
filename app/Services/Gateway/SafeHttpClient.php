@@ -33,6 +33,7 @@ class SafeHttpClient
         $laravelApp = function_exists('app') ? app() : null;
         $isLocalEnvironment = is_object($laravelApp)
             && method_exists($laravelApp, 'environment')
+            && $laravelApp->bound('env')
             && $laravelApp->environment(['local', 'testing']);
         $allowLocalDevelopment = $allowHttpLocal || $isLocalEnvironment;
         if (isset($parts['user']) || isset($parts['pass']) || isset($parts['fragment'])) {
